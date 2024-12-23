@@ -1,0 +1,17 @@
+name: choice
+on : 
+  workflow_dispatch:
+    inputs:
+      log-level:
+        type: choice
+        options: 
+          - info
+          - warn
+          - error
+        required: true
+        description: Log level
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ inputs.log-level}}"
