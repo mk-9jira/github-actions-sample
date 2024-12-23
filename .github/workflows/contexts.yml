@@ -4,6 +4,5 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      run: 
-        - echo "run workflow by ${{ github.actor }}"
-        - echo "runner os is ${{ runner.os }}"
+      - run: echo "run workflow by ${{ github.actor }}"
+      - run: echo "runner os is ${{ runner.os }}"
