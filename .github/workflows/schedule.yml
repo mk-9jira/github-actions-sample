@@ -1,7 +1,7 @@
-name: schedule
+name: notify-10AM-weekday
 on : 
   schedule:
-    - cron: '0 17 * * 1-5'
+    - cron: '0 1 * * 1-5'
 jobs:
   run:
     runs-on: ubuntu-latest
