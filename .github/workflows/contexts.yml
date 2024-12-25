@@ -5,7 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       ACTOR: ${{ github.actor }}
-      OS: ${{ runner.os }}
     steps:
       - run: echo "run workflow by ${ACTOR}"
-      - run: echo "runner os is ${OS}"
+      - run: echo "runner os is ${RUNNER_OS}"
