@@ -3,6 +3,9 @@ on: workflow_dispatch
 jobs:
   print:
     runs-on: ubuntu-latest
+    env: 
+      ACTOR: ${{ github.actor }}
+      OS: ${{ runner.os }}
     steps:
-      - run: echo "run workflow by ${{ github.actor }}"
-      - run: echo "runner os is ${{ runner.os }}"
+      - run: echo "run workflow by ${ACTOR}"
+      - run: echo "runner os is ${OS}"
